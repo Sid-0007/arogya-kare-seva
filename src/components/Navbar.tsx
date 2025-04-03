@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Heart, HeartPulse } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -8,13 +9,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
-            <div className="relative h-10 w-10 mr-2 overflow-hidden">
-              <img
-                src="/lovable-uploads/d8a2d024-18f4-4c1f-af33-9bf9bebac547.png"
-                alt="Swasthya Logo"
-                className="absolute inset-0 w-full h-full object-contain"
-              />
-              <div className="absolute inset-0 bg-swasthya-primary/10 rounded-full"></div>
+            <div className="relative h-10 w-10 mr-3 overflow-hidden bg-swasthya-primary rounded-full flex items-center justify-center">
+              <HeartPulse className="h-6 w-6 text-white animate-pulse-gentle" />
             </div>
             <span className="text-swasthya-primary text-2xl font-bold">Swasthya</span>
           </Link>

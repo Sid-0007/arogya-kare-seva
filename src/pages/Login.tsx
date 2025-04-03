@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Eye, EyeOff, User, Lock } from "lucide-react";
+import { Eye, EyeOff, User, Lock, HeartPulse } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const Login = () => {
@@ -24,19 +24,18 @@ const Login = () => {
       <div className="min-h-screen bg-gradient-to-b from-white to-swasthya-light/30 py-12 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-md mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="flex">
-              {/* Left side with image */}
-              <div className="hidden md:block w-1/2 bg-swasthya-primary">
-                <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center opacity-70"></div>
+            <div className="flex flex-col">
+              {/* Top section with logo */}
+              <div className="w-full bg-swasthya-primary p-6 flex flex-col items-center">
+                <div className="bg-white rounded-full p-3 mb-3">
+                  <HeartPulse className="h-10 w-10 text-swasthya-primary" />
+                </div>
+                <h2 className="text-2xl font-bold text-white">Welcome Back</h2>
+                <p className="text-white/90 mt-1">Sign in to your account</p>
               </div>
               
-              {/* Right side with form */}
-              <div className="w-full md:w-1/2 p-8">
-                <div className="text-center mb-8">
-                  <h2 className="text-2xl font-bold text-swasthya-primary">Welcome Back</h2>
-                  <p className="text-gray-600 mt-1">Sign in to your account</p>
-                </div>
-                
+              {/* Login form */}
+              <div className="w-full p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700">
