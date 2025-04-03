@@ -4,7 +4,6 @@ import Layout from "@/components/Layout";
 import HeroSection from "@/components/HeroSection";
 import HealthCardSection from "@/components/HealthCardSection";
 import FeaturesSection from "@/components/FeaturesSection";
-import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CtaSection from "@/components/CtaSection";
 
@@ -20,7 +19,6 @@ const Index = () => {
         <HeroSection />
         <HealthCardSection />
         <FeaturesSection />
-        <StatsSection />
         <TestimonialsSection />
         <CtaSection />
       </div>
