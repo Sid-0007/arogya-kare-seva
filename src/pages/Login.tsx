@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Eye, EyeOff, User, Lock, HeartPulse } from "lucide-react";
+import { Eye, EyeOff, User, Lock } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const Login = () => {
@@ -26,9 +26,13 @@ const Login = () => {
           <div className="max-w-md mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="flex flex-col">
               {/* Top section with logo */}
-              <div className="w-full bg-swasthya-primary p-6 flex flex-col items-center">
-                <div className="bg-white rounded-full p-3 mb-3">
-                  <HeartPulse className="h-10 w-10 text-swasthya-primary" />
+              <div className="w-full bg-swasthya-primary p-8 flex flex-col items-center">
+                <div className="bg-white rounded-full p-4 mb-4">
+                  <svg viewBox="0 0 100 100" className="w-12 h-12 text-swasthya-primary">
+                    <circle cx="50" cy="50" r="45" fill="#00806b" />
+                    <path d="M30 50 Q 50 20, 70 50 T 30 50" stroke="white" strokeWidth="4" fill="none" />
+                    <path d="M30 50 Q 50 80, 70 50" stroke="white" strokeWidth="4" fill="none" />
+                  </svg>
                 </div>
                 <h2 className="text-2xl font-bold text-white">Welcome Back</h2>
                 <p className="text-white/90 mt-1">Sign in to your account</p>
@@ -107,7 +111,7 @@ const Login = () => {
                     </div>
                   </div>
                   
-                  <Button type="submit" className="w-full bg-swasthya-primary hover:bg-swasthya-secondary">
+                  <Button type="submit" className="w-full bg-swasthya-primary hover:bg-swasthya-secondary text-lg py-6">
                     Sign In
                   </Button>
                 </form>
